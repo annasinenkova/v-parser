@@ -1,0 +1,21 @@
+module param
+
+    #(
+        parameter BUS_WIDTH=32,  
+        parameter DATA_WIDTH=64
+    )   
+    (
+        dd, ee, tt, ss, aa,
+        input in,
+        input [4:0] w, r, f,
+        output [3:0] s, e, q,
+        output out
+    );
+
+    input dd, ee, tt, ss, aa;
+
+    wire x, y, z;
+
+    assign out = z | ~(~(x | y) | (y & z) | ~y | (x & z)) | ~x | y;
+
+endmodule

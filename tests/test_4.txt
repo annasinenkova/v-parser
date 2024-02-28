@@ -1,0 +1,14 @@
+module second_func(
+        a, b, c,
+        output out,
+        input x, y, z
+    );
+    input a;
+    output b, c;
+
+    wire n1, n2, n3, n4, n5, n19;
+
+    assign out = z | ~(~(x | y) | (y & z) | ~y | (x & z)) | ~x | y;
+
+endmodule
+

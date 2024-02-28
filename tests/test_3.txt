@@ -1,0 +1,9 @@
+module second_func(out, x, y, z);
+
+    output out;
+    input x, y, z;
+
+    assign out = z | ~(~(x | y) | (y & z) | ~y | (x & z)) | ~x | y;
+
+endmodule
+

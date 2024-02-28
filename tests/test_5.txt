@@ -1,0 +1,7 @@
+module adder4(output sum, output c_out, input a, input b);
+    wire c0, c1, c2;
+    adder1 my0_adder1( .sum (sum) , .c_out (c0), .a (a), .b (b), .c_in (c2) );
+    adder1 my1_adder1( .sum (sum) , .c_out (c1), .a (a), .b (b), .c_in (c0));
+    adder1 my2_adder1( .sum (sum) , .c_out (c2), .a (a), .b (b), .c_in (c1));
+    adder1 my3_adder1( .sum (sum) , .c_out (c0), .a (a), .b (b), .c_in (c2) );
+endmodule
